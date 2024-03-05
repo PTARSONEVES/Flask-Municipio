@@ -16,4 +16,4 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 
 COPY . .
 
-#CMD [ "flask", "--app", "project", "run", "--host=0.0.0.0" ]
+CMD [ "flask", "--app", "flaskr", "run", "--host=0.0.0.0" ]
