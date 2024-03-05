@@ -50,7 +50,7 @@ COPY . .
 #    apt-get install -y wkhtmltopdf xvfb && pip install --upgrade pip
 #RUN apt-get install apt-utils
 #RUN pip install -r requirements.txt
-#EXPOSE 5000
+EXPOSE 5000
 #RUN apt-get update 
 #RUN pip install --upgrade pip
 #RUN pip install --no-cache /wheels/*
