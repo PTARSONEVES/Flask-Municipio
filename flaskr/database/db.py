@@ -29,16 +29,27 @@ def connection():
 
 def dockerconnect():
     try:
+#        c = pymysql.connect(
+#            host=current_app.config["MYDOCKER_HOST"],
+#            user=current_app.config["MYDOCKER_USER"],
+#            passwd=current_app.config["MYDOCKER_PASS"],
+#            database=current_app.config["MYDOCKER_DATABASE"],
+#            port=current_app.config["MYDOCKER_PORT"],
+#            charset='utf8mb4',
+#            cursorclass=pymysql.cursors.DictCursor,
+#            autocommit=True
+#        )
         c = pymysql.connect(
-            host=current_app.config["MYDOCKER_HOST"],
-            user=current_app.config["MYDOCKER_USER"],
-            passwd=current_app.config["MYDOCKER_PASS"],
-            database=current_app.config["MYDOCKER_DATABASE"],
-            port=current_app.config["MYDOCKER_PORT"],
+            host='flask_squallo.mysql.dbaas.com.br',
+            user='flask_squallo',
+            passwd='Strol!ndi!1',
+            database='flask_squallo',
+            port=3306,
             charset='utf8mb4',
             cursorclass=pymysql.cursors.DictCursor,
             autocommit=True
         )
+
         return c
     except:
         print('Erro de Conexão')
