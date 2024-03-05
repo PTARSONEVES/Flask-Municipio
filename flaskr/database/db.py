@@ -34,6 +34,7 @@ def dockerconnect():
             user=current_app.config["MYDOCKER_USER"],
             passwd=current_app.config["MYDOCKER_PASS"],
             database=current_app.config["MYDOCKER_DATABASE"],
+            port=current_app.config["MYDOCKER_PORT"],
             charset='utf8mb4',
             cursorclass=pymysql.cursors.DictCursor,
             autocommit=True
