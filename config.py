@@ -52,11 +52,17 @@ class BaseConfig(object):
     #MYSQL_PORT = 3306
     #MYSQL_DATABASE = 'flask_ancorar'
     # MYSQL - DOCKER - LAYOUT
-    MYDOCKER_HOST = 'mysql'
-    MYDOCKER_USER = 'root'
-    MYDOCKER_PASS = 'strolandia'
-    MYDOCKER_PORT = 3307
-    MYDOCKER_DATABASE = 'docker_flask'
+   # MYDOCKER_HOST = 'mysql'
+   # MYDOCKER_USER = 'root'
+   # MYDOCKER_PASS = 'strolandia'
+   # MYDOCKER_PORT = 3307
+   # MYDOCKER_DATABASE = 'docker_flask'
+    MYDOCKER_HOST = 'flask_squallo.mysql.dbaas.com.br'
+    MYDOCKER_USER = 'flask_squallo'
+    MYDOCKER_PASS = 'strol!ndi!1'
+    MYDOCKER_PORT = 3306
+    MYDOCKER_DATABASE = 'flask_squallo'
+   
     #CORRESPONDENCIA
     MAIL_SERVER='email-ssl.com.br'
     MAIL_PORT=587
