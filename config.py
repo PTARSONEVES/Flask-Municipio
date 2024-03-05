@@ -39,7 +39,7 @@ class BaseConfig(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLITE_CONNECT = 'sqlite:///' + os.path.join(basedir, 'dev.sqlite')
     # MYSQL - LOCALHOST
-    TYPE_CONNECT = 'mydocker'
+    TYPE_CONNECT = 'mysql'
     MYSQL_HOST = 'localhost'
     MYSQL_USER = 'root'
     MYSQL_PASS = ''
