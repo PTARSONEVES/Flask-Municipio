@@ -43,9 +43,11 @@ COPY . /app
 #RUN apt-get install -y --no-install-recommends netcat
 #COPY --from=builder /usr/src/app/wheels /wheels
 #COPY --from=builder /usr/src/app/requirements.txt .
-RUN apt-get update && apt-get install -y apt-utils && apt-get install -y wkhtmltopdf xvfb
+RUN apt-get update && apt-get install -y apt-utils && \ 
+    apt-get install -y wkhtmltopdf xvfb && pip install --upgrade pip
 #RUN apt-get install apt-utils
 RUN pip install -r requirements.txt
+EXPOSE 5000
 #RUN apt-get update 
 #RUN pip install --upgrade pip
 #RUN pip install --no-cache /wheels/*
