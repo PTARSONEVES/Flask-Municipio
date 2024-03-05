@@ -5,8 +5,8 @@ FROM python:3.11.3-slim-buster
 # set work directory
 WORKDIR /app
 
-RUN apt-get update 
-RUN apt-get install -y apt-utils
+#RUN apt-get update 
+#RUN apt-get install -y apt-utils
 #RUN apt-get install -y wkhtmltopdf xvfb
 
 COPY requirements.txt requirements.txt
