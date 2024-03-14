@@ -45,4 +45,4 @@ def prereserva():
         if form.errors != {}:
             for err in form.errors.values():
                 flash(f"Erros ao preencher formulário {err}", category="danger")
-    return render_template('reservas/prereserva.html',form=form)
+    return render_template('reservas/prereserva.html',form=form, idpage="formPreResearch")

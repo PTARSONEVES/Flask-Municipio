@@ -41,7 +41,7 @@ def register():
         if form.errors != {}:
             for err in form.errors.values():
                 flash(f"Erro ao cadastrar usuário {err}", category="danger")
-    return render_template('auth/register.html', form=form)
+    return render_template('auth/register.html', form=form, idpage="formRegister")
 
 
 @bp.route('/login', methods=('GET', 'POST'))
@@ -74,7 +74,7 @@ def login():
                 flash(f"Conta ainda não confirmada> Verifique seu e-mail", category="danger")
             else:
                 flash(f"Erro ao efetuar login. Verificar senha e/ou usuário", category="danger")
-    return render_template("auth/login.html", form=form)
+    return render_template("auth/login.html", form=form, idpage="formLogin")
 
 
 @bp.before_app_request
@@ -157,7 +157,7 @@ def lostinfoemail():
         if form.errors != {}:
             for err in form.errors.values():
                 flash(f"{err}", category="danger")
-        return render_template('auth/lost_infoemail.html', form=form)
+        return render_template('auth/lost_infoemail.html', form=form, idpage="lostEmail")
 
 @bp.route('/confirmlost/<token>', methods=['GET','POST'])
 def confirm_lost(token):
@@ -186,4 +186,4 @@ def changepass(usuario):
         db.execute(query,(senha,criacao,usuario))
         flash('Senha alterada com sucesso!! Faça seu login.','success')
         return redirect(url_for('auth.login'))
-    return render_template('auth/lost_changepass.html', form=form, usuario=usuario)
+    return render_template('auth/lost_changepass.html', form=form, usuario=usuario, idpage="formChangePass")

@@ -1,0 +1,1 @@
+window.fields = new FieldController();
