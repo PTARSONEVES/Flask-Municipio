@@ -49,6 +49,7 @@ def login():
     form=FormLogin()
     error = None
     if request.method == 'POST':
+        print("EEEEEEEEEEEEE",form.usuario.data)
         if form.validate_on_submit():
             usuario=form.usuario.data
             password=form.senha.data

@@ -30,8 +30,8 @@ class FormRegister(FlaskForm):
     submit = SubmitField(label="Cadastrar")
 
 class FormLogin(FlaskForm):
-    usuario = StringField(label="Nome do Usuário:", validators=[DataRequired()])
-    senha = PasswordField(label="Senha:",validators=[DataRequired()])
+    usuario = StringField(validators=[DataRequired()])
+    senha = PasswordField(validators=[DataRequired()])
     submit = SubmitField(label="Login")
 
 class FormLostInfoemail(FlaskForm):
